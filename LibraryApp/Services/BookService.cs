@@ -21,7 +21,7 @@ namespace LibraryApp.Services
             _argumentChecker = argumentChecker;
         }
 
-        public IList<Book> ListAllBooks()
+        public IList<Book> GetAListOfAllBooks()
         {
             IList<Book> books = _bookRepository.GetAll();
 
