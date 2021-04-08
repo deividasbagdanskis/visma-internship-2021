@@ -195,16 +195,6 @@ namespace LibraryApp.Tests.RepositoriesTests
             DeleteTestBooks();
         }
 
-        private void AddTestBooks()
-        {
-            IList<Book> testBooks = GetTestBooks();
-
-            foreach (Book book in testBooks)
-            {
-                _bookRepository.Add(book);
-            }
-        }
-
         [Fact]
         public void Delete_Book_Pass()
         {
@@ -224,6 +214,16 @@ namespace LibraryApp.Tests.RepositoriesTests
             bool result = _bookRepository.Delete(book.ISBN);
 
             Assert.True(result);
+        }
+
+        private void AddTestBooks()
+        {
+            IList<Book> testBooks = GetTestBooks();
+
+            foreach (Book book in testBooks)
+            {
+                _bookRepository.Add(book);
+            }
         }
 
         private void DeleteTestBooks()
