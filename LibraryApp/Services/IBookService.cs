@@ -7,6 +7,6 @@ namespace LibraryApp.Services
     {
         string AddNewBook(string[] args);
         string DeleteBook(string[] args);
-        IList<Book> ListAllBooks();
+        IList<Book> GetAListOfAllBooks();
     }
 }
