@@ -29,6 +29,7 @@ namespace LibraryApp
                 services.AddTransient<IArgumentParser, ArgumentParser>();
                 services.AddTransient<IConsoleWriter, ConsoleWriter>();
                 services.AddTransient<IFilteringService, FilteringService>();
+                services.AddTransient<IBorrowingService, BorrowingService>();
             });
         }
     }

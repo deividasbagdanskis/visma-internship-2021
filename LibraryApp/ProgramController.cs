@@ -10,13 +10,15 @@ namespace LibraryApp
         private IBookService _bookService;
         private IConsoleWriter _consoleWriter;
         private IFilteringService _filteringService;
+        private IBorrowingService _borrowingService;
 
         public ProgramController(IBookService bookService, IConsoleWriter consoleWriter,
-            IFilteringService filteringService)
+            IFilteringService filteringService, IBorrowingService borrowingService)
         {
             _bookService = bookService;
             _consoleWriter = consoleWriter;
             _filteringService = filteringService;
+            _borrowingService = borrowingService;
         }
 
         public void Start(string[] args)
@@ -38,6 +40,9 @@ namespace LibraryApp
                     break;
                 case "filter":
                     books = _filteringService.FilterBooks(args[1]);
+                    break;
+                case "take":
+                    result = _borrowingService.TakeABook(args);
                     break;
                 default:
                     break;

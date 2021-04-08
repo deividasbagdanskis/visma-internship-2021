@@ -67,8 +67,8 @@ namespace LibraryApp.Services
 
                     string result = "";
 
-                    result += "The book was taken successfully\n";
-                    result += "Return date: " + takenBook.ReturnDate.ToString("yyyy-MM-dd HH:mm:ss") + "\n";
+                    result += "The book has been taken successfully\n";
+                    result += "\nReturn date: " + takenBook.ReturnDate.ToString("yyyy-MM-dd HH:mm:ss") + "\n";
                     result += takenBook.ToString();
 
                     return result;
