@@ -9,11 +9,14 @@ namespace LibraryApp
     {
         private IBookService _bookService;
         private IConsoleWriter _consoleWriter;
+        private IFilteringService _filteringService;
 
-        public ProgramController(IBookService bookService, IConsoleWriter consoleWriter)
+        public ProgramController(IBookService bookService, IConsoleWriter consoleWriter,
+            IFilteringService filteringService)
         {
             _bookService = bookService;
             _consoleWriter = consoleWriter;
+            _filteringService = filteringService;
         }
 
         public void Start(string[] args)
@@ -32,6 +35,9 @@ namespace LibraryApp
                     break;
                 case "delete":
                     result = _bookService.DeleteBook(args);
+                    break;
+                case "filter":
+                    books = _filteringService.FilterBooks(args[1]);
                     break;
                 default:
                     break;
