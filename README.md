@@ -2,7 +2,7 @@
 
 Library management console application created for Visma 2021 internship.
 
-##How to use the application:
+## How to use the application:
 
 Main commands:
 add - Add a new book. All of the following arguments must be passed in order to add a new book.
