@@ -1,0 +1,35 @@
+[
+  {
+    "Name": "1984",
+    "Author": "George Orwell",
+    "Category": "Fiction Satire",
+    "Language": "English",
+    "PublicationDate": "2003-06-01T00:00:00",
+    "ISBN": "978-0151010264",
+    "Availability": 0,
+    "ReturnDate": "0001-01-01T00:00:00",
+    "Borrower": null
+  },
+  {
+    "Name": "Sapiens: A Brief History of Humankind",
+    "Author": "Yuval Noah Harari",
+    "Category": "History",
+    "Language": "English",
+    "PublicationDate": "2015-02-10T00:00:00",
+    "ISBN": "9780062316097",
+    "Availability": 0,
+    "ReturnDate": "0001-01-01T00:00:00",
+    "Borrower": null
+  },
+  {
+    "Name": "The Stranger",
+    "Author": "Albert Camus",
+    "Category": "Classic",
+    "Language": "English",
+    "PublicationDate": "1989-03-13T00:00:00",
+    "ISBN": "9780679720201",
+    "Availability": 0,
+    "ReturnDate": "0001-01-01T00:00:00",
+    "Borrower": null
+  }
+]
