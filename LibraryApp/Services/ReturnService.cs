@@ -67,7 +67,7 @@ namespace LibraryApp.Services
             }
             else
             {
-                return "Some parameters are missing";
+                return "Some arguments are missing";
             }
         }
     }
