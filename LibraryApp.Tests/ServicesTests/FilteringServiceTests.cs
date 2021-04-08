@@ -21,16 +21,6 @@ namespace LibraryApp.Tests.ServicesTests
             _filteringService = new FilteringService(_bookRepository);
         }
 
-        private void AddTestBooks()
-        {
-            IList<Book> testBooks = GetTestBooks();
-
-            foreach (Book book in testBooks)
-            {
-                _bookRepository.Add(book);
-            }
-        }
-
         [Fact]
         public void Filter_Name_1984_Pass()
         {
@@ -131,6 +121,16 @@ namespace LibraryApp.Tests.ServicesTests
             Assert.Equal(expectedCount, actualCount);
 
             DeleteTestBooks();
+        }
+
+        private void AddTestBooks()
+        {
+            IList<Book> testBooks = GetTestBooks();
+
+            foreach (Book book in testBooks)
+            {
+                _bookRepository.Add(book);
+            }
         }
 
         private void DeleteTestBooks()
