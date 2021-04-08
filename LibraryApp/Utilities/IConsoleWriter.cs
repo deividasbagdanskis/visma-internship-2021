@@ -7,5 +7,6 @@ namespace LibraryApp.Utilities
     {
         void PrintBooks(IList<Book> books);
         void PrintResultMessage(string result);
+        void PrintManual();
     }
 }

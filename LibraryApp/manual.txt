@@ -7,6 +7,9 @@
     --language="Language the book is written in"
     --publicationDate="Publication date of the book" Use yyyy-MM-dd format
     --ISBN="ISBN of the book"
+  delete - Delete a book. All of the following arguments must be passed in order to delete a new book.
+    ARGUMENTS
+    --ISBN="ISBN of the book"
   list-all - List all the books.
   filter - Filter books by a given attribute.
     OPTIONS

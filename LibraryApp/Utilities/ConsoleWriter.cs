@@ -1,6 +1,7 @@
 ﻿using LibraryApp.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace LibraryApp.Utilities
 {
@@ -24,6 +25,15 @@ namespace LibraryApp.Utilities
         public void PrintResultMessage(string result)
         {
             Console.WriteLine(result);
+        }
+
+        public void PrintManual()
+        {
+            string manualPath = AppDomain.CurrentDomain.BaseDirectory + "..\\..\\..\\manual.txt";
+
+            string text = File.ReadAllText(manualPath);
+
+            Console.WriteLine(text);
         }
     }
 }
