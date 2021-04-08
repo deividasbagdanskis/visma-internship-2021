@@ -30,6 +30,7 @@ namespace LibraryApp
                 services.AddTransient<IConsoleWriter, ConsoleWriter>();
                 services.AddTransient<IFilteringService, FilteringService>();
                 services.AddTransient<IBorrowingService, BorrowingService>();
+                services.AddTransient<IReturnService, ReturnService>();
             });
         }
     }
