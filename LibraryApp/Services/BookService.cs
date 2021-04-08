@@ -58,7 +58,7 @@ namespace LibraryApp.Services
             }
             else
             {
-                result = "Some parameters are missing";
+                result = "Some arguments are missing";
             }
 
             return result;
@@ -103,18 +103,25 @@ namespace LibraryApp.Services
 
                 if (book != null)
                 {
-                    _bookRepository.Delete(book);
+                    bool bookWasDeleted = _bookRepository.Delete(book.ISBN);
 
-                    result = "Book was successfully deleted";
+                    if (bookWasDeleted)
+                    {
+                        result = "The book was successfully deleted";
+                    }
+                    else
+                    {
+                        result = "The book was not deleted";
+                    }
                 }
                 else
                 {
-                    result = "Book was not found";
+                    result = "The book was not found";
                 }
             }
             else
             {
-                result = "Some parameters are missing";
+                result = "Some arguments are missing";
             }
 
             return result;

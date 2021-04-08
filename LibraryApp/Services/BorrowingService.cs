@@ -49,8 +49,9 @@ namespace LibraryApp.Services
                 }
 
                 int alreadyBorrowedBookCount = _bookRepository.GetBooksByBorrower(borrower).Count;
+                int bookLimit = 3;
 
-                if (alreadyBorrowedBookCount < 3)
+                if (alreadyBorrowedBookCount + 1  <= bookLimit)
                 {
                     Book takenBook = _bookRepository.GetBooksByISBN(borrowingBookISBN).FirstOrDefault();
 
@@ -85,7 +86,7 @@ namespace LibraryApp.Services
             }
             else
             {
-                return "Some parameters are missing";
+                return "Some arguments are missing";
             }
         }
     }
