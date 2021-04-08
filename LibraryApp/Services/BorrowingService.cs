@@ -59,6 +59,11 @@ namespace LibraryApp.Services
                         return "Book was not found";
                     }
 
+                    if (takenBook.Availability == BookAvailability.Taken)
+                    {
+                        return "This book is already taken";
+                    }
+
                     takenBook.Borrower = borrower;
                     takenBook.Availability = BookAvailability.Taken;
                     takenBook.ReturnDate = DateTime.UtcNow.AddDays(borrowingPeriod);
