@@ -105,9 +105,16 @@ namespace LibraryApp.Repositories
             return result;
         }
 
-        public bool Delete(Book book)
+        public bool Delete(string isbn)
         {
-            bool result = _books.Remove(book);
+            Book book = _books.Where(b => b.ISBN == isbn).FirstOrDefault();
+
+            bool result = false;
+
+            if (book != null)
+            {
+                result = _books.Remove(book);
+            }
 
             WriteToJson();
 

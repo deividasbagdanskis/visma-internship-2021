@@ -103,9 +103,16 @@ namespace LibraryApp.Services
 
                 if (book != null)
                 {
-                    _bookRepository.Delete(book);
+                    bool bookWasDeleted = _bookRepository.Delete(book.ISBN);
 
-                    result = "Book was successfully deleted";
+                    if (bookWasDeleted)
+                    {
+                        result = "Book was successfully deleted";
+                    }
+                    else
+                    {
+                        result = "Book was not deleted";
+                    }
                 }
                 else
                 {

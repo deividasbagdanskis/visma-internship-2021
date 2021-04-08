@@ -14,7 +14,7 @@ namespace LibraryApp.Repositories
         IList<Book> GetBooksByLanguage(string language);
         IList<Book> GetBooksByName(string name);
         void Add(Book book);
-        bool Delete(Book book);
+        bool Delete(string isbn);
         bool Update(Book book);
     }
 }
